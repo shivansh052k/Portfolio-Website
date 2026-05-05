@@ -7,7 +7,7 @@ import { useEffect, useRef } from "react";
 const stats = [
   { value: 4, suffix: "+", label: "Years of Experience" },
   { value: 5, suffix: "+", label: "Industries" },
-  { value: 3, suffix: "", label: "Companies" },
+  { value: 3, suffix: "", label: "Multi-Stage Companies" },
   { value: 15, suffix: "+", label: "AI Models Deployed" },
   { value: 240, suffix: "M+", label: "Documents Processed" },
   { value: 700, suffix: "B+", label: "Tokens Processed" },
