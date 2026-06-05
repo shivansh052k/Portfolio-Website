@@ -6,6 +6,20 @@ import { useRef, useState } from "react";
 import { useEffect } from "react";
 
 const experiences = [
+    {
+    id: "a2il",
+    company: "AI Innovation Lab (A2IL) – University at Buffalo",
+    role: "Applied AI Intern",
+    period: "Sep 2025 – Feb 2026",
+    location: "Buffalo, NY",
+    bullets: [
+      "Designed a multimodal generative recommendation engine fusing visual and text signals via transformers into a conditional diffusion policy, improving ranking nDCG@10 by 14.5% over SASRec baseline on Amazon Reviews benchmark across 30 domains.",
+      "Architected a CQL-based multi-agent offline RL framework with dynamic RLHF reward modeling, achieving 32% improvement in Hit Rate and optimizing for sustained session engagement beyond next-click prediction.",
+      "Built a sequential planning and vector retrieval layer that hardened the system against degraded inputs, reducing stress-test quality degradation.",
+      "Reduced token storage 16x by encoding visual and text embeddings into cached RQ-VAE codes, eliminating memory bottleneck at large-scale retrieval.",
+    ],
+    tags: ["Transformers", "Diffusion Models", "Offline RL", "RLHF", "RQ-VAE", "Multimodal", "RecSys", "Python"],
+  },
   {
     id: "heinonline",
     company: "HeinOnline",
@@ -176,9 +190,10 @@ export default function Experience() {
                 index={i}
                 isActive={activeIndex === i}
                 onActive={setActiveIndex}
-              />
+              />             
             ))}
           </div>
+          
 
           {/* Right: Sticky detail */}
           <div className="md:sticky md:top-28">

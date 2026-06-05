@@ -1,25 +1,38 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useTheme } from "next-themes";
+import { Sun, Moon } from "lucide-react";
 // import {
 //   NavigationMenu,
 //   NavigationMenuItem,
 //   NavigationMenuList,
 // } from "@/components/ui/navbar-menu";
 
+// const links = [
+//   { label: "About", href: "#about" },
+//   { label: "Experience", href: "#experience" },
+//   { label: "Projects", href: "#projects" },
+//   { label: "Research", href: "#research" },
+//   { label: "Blog", href: "#blog" },
+//   { label: "Contact", href: "#contact" },
+// ];
+
 const links = [
   { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
-  { label: "Research", href: "#research" },
-  { label: "Blog", href: "#blog" },
+  { label: "Education", href: "#education" },
   { label: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
   const [active, setActive] = useState<string | null>(null);
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
 
   return (
     <motion.header
@@ -53,6 +66,15 @@ export default function Navbar() {
       >
         Resume
       </Link> */}
+      {mounted && (
+        <button
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          className="flex items-center justify-center w-9 h-9 rounded-lg border border-border text-muted-foreground hover:text-primary hover:border-primary/50 transition-all duration-200"
+          aria-label="Toggle theme"
+        >
+          {theme === "dark" ? <Sun size={15} /> : <Moon size={15} />}
+        </button>
+      )}
     </motion.header>
   );
 }

@@ -3,6 +3,9 @@ import About from "@/components/sections/About";
 import Skills from "@/components/sections/skills";
 import CircuitGrid from "@/components/ui/circuit-grid";
 import Experience from "@/components/sections/Experience";
+import Projects from "@/components/sections/Projects";
+import Education from "@/components/sections/Education";
+import Contact from "@/components/sections/Contact";
 
 export default function Home() {
   return (
@@ -13,6 +16,9 @@ export default function Home() {
         <About />
         <Skills />
         <Experience />
+        <Projects />
+        <Education />
+        <Contact />
       </div>
     </main>
   );

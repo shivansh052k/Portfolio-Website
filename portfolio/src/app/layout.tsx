@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Cursor from "@/components/Cursor";
 import LoadingScreen from "@/components/LoadingScreen";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const syne = Syne({
   variable: "--font-syne",
@@ -36,13 +37,16 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${syne.variable} ${jetbrainsMono.variable} ${instrumentSerif.variable} h-full antialiased dark`}
+      className={`${syne.variable} ${jetbrainsMono.variable} ${instrumentSerif.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
-        <LoadingScreen />
-        <Navbar />
-        <Cursor />
-        {children}
+        <ThemeProvider>
+          <LoadingScreen />
+          <Navbar />
+          <Cursor />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
