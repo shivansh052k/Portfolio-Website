@@ -43,7 +43,7 @@ export default function Navbar() {
     >
       <Link
         href="/"
-        className="font-heading text-lg font-bold tracking-tight text-foreground"
+        className="font-heading text-2xl font-bold tracking-tight text-foreground"
       >
         SG<span className="text-primary">.</span>
       </Link>

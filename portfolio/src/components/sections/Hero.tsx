@@ -127,11 +127,19 @@ export default function Hero() {
             >
               LinkedIn
             </a>
-            <a
+                        <a
               href="mailto:shivanshgupta323@gmail.com"
               className="font-mono text-xs text-muted-foreground hover:text-primary transition-colors tracking-widest uppercase"
             >
               Email
+            </a>
+            <a
+              href="https://drive.google.com/file/d/1GfZDbRwEOTZTGZUYbyV49pffLSjh4JrJ/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-xs text-muted-foreground hover:text-primary transition-colors tracking-widest uppercase"
+            >
+              Resume
             </a>
           </motion.div>
         </div>
